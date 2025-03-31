@@ -1,0 +1,11 @@
+<resources>
+    <!-- Bottom Navigation Text Styles -->
+    <style name="BottomNavigationView.Active" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="BottomNavigationView.Inactive" parent="TextAppearance.AppCompat.Caption">
+        <item name="android:textSize">11sp</item>
+    </style>
+</resources>

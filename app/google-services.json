@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "187745985232",
+    "project_id": "mealmates-c3ead",
+    "storage_bucket": "mealmates-c3ead.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187745985232:android:36d18a1490649e59bb74d5",
+        "android_client_info": {
+          "package_name": "com.example.myrecipebook"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwX0-serMl9wObmXOjKETOpns4c8qVkfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

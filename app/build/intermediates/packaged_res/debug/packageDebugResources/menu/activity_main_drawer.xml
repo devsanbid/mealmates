@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_baseline_home_24"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="@string/menu_profile" />
+
+        <item
+            android:id="@+id/nav_all_recipes"
+            android:icon="@drawable/ic_baseline_favorite_24"
+            android:title="@string/menu_all_recipes" />
+
+        <item
+            android:id="@+id/nav_my_recipes"
+            android:icon="@drawable/ic_baseline_list_alt_24"
+            android:title="@string/menu_my_recipes" />
+
+        <item
+            android:id="@+id/nav_upload_recipe"
+            android:icon="@drawable/ic_baseline_upload"
+            android:title="@string/menu_upload_recipe" />
+
+        <item
+            android:id="@+id/nav_weekly_plan"
+            android:icon="@drawable/ic_baseline_calendar_today_24"
+            android:title="@string/menu_weekly_plan" />
+
+        <item
+            android:id="@+id/nav_grocery_list"
+            android:icon="@drawable/ic_baseline_shopping_cart_24"
+            android:title="@string/menu_grocery_list" />
+
+        <item
+            android:id="@+id/nav_delegation"
+            android:icon="@drawable/ic_baseline_group_24"
+            android:title="@string/menu_delegation" />
+
+        <item
+            android:id="@+id/nav_store_maps"
+            android:icon="@drawable/ic_baseline_map_24"
+            android:title="@string/menu_store_maps" />
+
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_baseline_settings_24"
+            android:title="@string/menu_settings" />
+    </group>
+</menu>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingStart="48dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:gravity="center_vertical"
+    android:background="?attr/selectableItemBackground">
+    <!-- Further indent under recipe -->
+
+    <CheckBox
+        android:id="@+id/grocery_ingredient_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"/>
+
+    <TextView
+        android:id="@+id/grocery_ingredient_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="16sp"
+        android:textColor="?android:attr/textColorPrimary"
+        android:text="Ingredient Name"
+        android:drawableEnd="@drawable/ic_purchased"
+        android:drawablePadding="8dp"
+        android:drawableTint="?attr/colorPrimary" />
+
+</LinearLayout>

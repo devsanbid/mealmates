@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions -->
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" /> <!-- Added maxSdkVersion for consistency -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Removed ACCESS_BACKGROUND_LOCATION unless specifically needed -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Removed SEND_SMS as feature is disabled -->
+    <!-- Removed READ_PHONE_STATE unless specifically needed -->
+    <!-- Removed C2DM and GSF permissions unless using older GCM/FCM -->
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher_foreground"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyRecipeBook"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <!-- Google Maps API Key -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBMue71xAtav3u3Y6sg7EYA0i1tdhBx7wg" /> <!-- Remember to replace this -->
+
+        <!-- Activities -->
+        <activity
+            android:name=".activities.WelcomeActivity"
+            android:exported="true"
+            android:launchMode="standard">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MyRecipeBook.NoActionBar" />
+         <activity
+            android:name=".activities.RegisterActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true" />
+         <activity
+            android:name=".activities.ProfileActivity"
+            android:exported="true" /> <!-- Assuming accessible from outside MainActivity? -->
+        <activity
+            android:name=".activities.UploadRecipeActivity"
+            android:exported="true" /> <!-- Assuming accessible from outside MainActivity? -->
+        <activity
+            android:name=".activities.AllRecipesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.MyRecipesActivity"
+            android:exported="false" /> <!-- Added Declaration -->
+        <activity
+            android:name=".activities.DailyMealPlanActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.GroceryListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DelegationActivity"
+            android:exported="true" /> <!-- Assuming accessible from outside MainActivity? -->
+         <activity
+            android:name=".activities.MapDetailActivity"
+            android:exported="false" />
+         <activity
+            android:name=".activities.SettingsActivity"
+            android:exported="false" />
+         <activity
+            android:name=".activities.SavedLocationsActivity"
+            android:exported="false"
+            android:parentActivityName=".ui.map.MapFragment"/>
+
+        <!-- Remove declarations for non-activity classes -->
+        <!--
+        <activity
+            android:name=".category.CategoeryFragment" tools:ignore="Instantiatable" />
+        <activity
+            android:name=".ui.dailymeal.DailyMealFragment" tools:ignore="Instantiatable" />
+        <activity
+            android:name=".models.DailyMealItem" tools:ignore="Instantiatable" />
+        <activity
+            android:name=".adapters.DailyMealAdapter" tools:ignore="Instantiatable" />
+         -->
+
+    </application>
+
+</manifest>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/side_nav_bar"
+    android:orientation="vertical"
+    android:padding="@dimen/activity_horizontal_margin"
+    android:id="@+id/navHeaderFragament"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <!-- Layout is now empty except for basic structure -->
+</LinearLayout>

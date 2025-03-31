@@ -1,0 +1,176 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Recipe"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Upload Recipe Image -->
+        <ImageView
+            android:id="@+id/recipe_image_preview"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_baseline_image_24"
+            android:contentDescription="Recipe Image Preview"
+            android:background="@drawable/edit_text_bg"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/button_select_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Select Image"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Recipe Title -->
+        <EditText
+            android:id="@+id/recipeTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Choose Title of your recipe"
+            android:inputType="text"
+            android:background="@drawable/edit_text_bg"
+            android:padding="12dp"
+            android:layout_marginTop="12dp"/>
+
+        <!-- Recipe Description -->
+        <EditText
+            android:id="@+id/recipeDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tell us something more about this recipe"
+            android:inputType="textMultiLine"
+            android:background="@drawable/edit_text_bg"
+            android:padding="12dp"
+            android:layout_marginTop="8dp"
+            android:lines="3"/>
+
+        <!-- Category Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:layout_marginTop="12dp"/>
+
+        <Spinner
+            android:id="@+id/categorySpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/edit_text_bg"
+            android:padding="12dp"
+            android:spinnerMode="dropdown"/>
+
+        <!-- Preparation Time -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preparation Time (minutes)"
+            android:layout_marginTop="12dp"/>
+
+        <NumberPicker
+            android:id="@+id/prepTimePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Serves -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Serves"
+            android:layout_marginTop="12dp"/>
+
+        <NumberPicker
+            android:id="@+id/servesPicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Add Ingredients -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Ingredients"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/ingredientInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter ingredient"
+            android:background="@drawable/edit_text_bg"
+            android:padding="12dp"/>
+
+        <Button
+            android:id="@+id/addIngredientButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ Add"
+            android:layout_gravity="end"
+            android:background="@drawable/button_bg"/>
+
+        <LinearLayout
+            android:id="@+id/ingredientList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <!-- Preparation Steps -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Preparation"
+            android:textStyle="bold"
+            android:layout_marginTop="12dp"/>
+
+        <EditText
+            android:id="@+id/stepInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Step 1"
+            android:background="@drawable/edit_text_bg"
+            android:padding="12dp"/>
+
+        <Button
+            android:id="@+id/addStepButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ Add"
+            android:layout_gravity="end"
+            android:background="@drawable/button_bg"/>
+
+        <LinearLayout
+            android:id="@+id/stepList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <!-- Publish Button -->
+        <Button
+            android:id="@+id/publishButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Publish"
+            android:background="@drawable/publish_button_bg"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+</ScrollView>

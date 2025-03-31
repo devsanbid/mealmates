@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.map.MapFragment">
+
+    <!-- Map View (Initially hidden) -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map_activity"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@id/input_section"/>
+
+    <!-- Input Section -->
+    <LinearLayout
+        android:id="@+id/input_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#CCFFFFFF"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Store Location"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/edit_text_store_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Store Name"
+            android:inputType="textCapWords"
+            android:maxLines="1"
+            android:background="@drawable/edit_text_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edit_text_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Select Location"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="true"
+                android:background="@drawable/edit_text_bg"
+                android:padding="12dp"/>
+
+            <ImageButton
+                android:id="@+id/button_pick_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_map_24"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_marginStart="8dp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_save_store"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Location"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/button_view_saved"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Saved Locations"
+            android:layout_marginTop="8dp"/>
+    </LinearLayout>
+
+    <!-- History Section -->
+    <LinearLayout
+        android:id="@+id/history_section"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_above="@+id/input_section"
+        android:layout_marginBottom="16dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:elevation="8dp"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved Locations"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_margin="16dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/history_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp"/>
+    </LinearLayout>
+
+</RelativeLayout>
