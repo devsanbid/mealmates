@@ -7,7 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.myrecipebook.R;
 import com.example.myrecipebook.models.Recipe;
 import com.google.gson.Gson;
+import java.io.File;
 import java.util.List;
+import com.squareup.picasso.Picasso;
 
 public class RecipeDetailActivity extends AppCompatActivity {
     
@@ -23,6 +25,22 @@ public class RecipeDetailActivity extends AppCompatActivity {
         // Initialize views
         ImageView recipeImage = findViewById(R.id.recipe_image);
         TextView title = findViewById(R.id.recipe_title);
+        
+        // Load recipe image
+        if (recipe.getImageUrl() != null && !recipe.getImageUrl().isEmpty()) {
+            File imgFile = new File(recipe.getImageUrl());
+            if (imgFile.exists()) {
+                Picasso.get()
+                    .load(imgFile)
+                    .placeholder(R.drawable.ic_baseline_image_24)
+                    .error(R.drawable.ic_baseline_image_24)
+                    .into(recipeImage);
+            } else {
+                recipeImage.setImageResource(R.drawable.ic_baseline_image_24);
+            }
+        } else {
+            recipeImage.setImageResource(R.drawable.ic_baseline_image_24);
+        }
         TextView description = findViewById(R.id.recipe_description);
         TextView duration = findViewById(R.id.recipe_duration);
         TextView servings = findViewById(R.id.recipe_servings);
