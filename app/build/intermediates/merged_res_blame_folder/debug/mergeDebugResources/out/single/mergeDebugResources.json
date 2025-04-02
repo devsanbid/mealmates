@@ -1,19 +1,19 @@
 [
     {
-        "merged": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-debug-56:/layout_activity_grocery_list.xml.flat",
-        "source": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-main-58:/layout/activity_grocery_list.xml"
-    },
-    {
         "merged": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-debug-56:/mipmap-hdpi_ic_launcher.webp.flat",
         "source": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-main-58:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-debug-56:/navigation_mobile_navigation.xml.flat",
-        "source": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-main-58:/navigation/mobile_navigation.xml"
+        "merged": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-debug-56:/layout_activity_grocery_list.xml.flat",
+        "source": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-main-58:/layout/activity_grocery_list.xml"
     },
     {
         "merged": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-debug-56:/drawable_ic_baseline_shopping_cart_24.xml.flat",
         "source": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-main-58:/drawable/ic_baseline_shopping_cart_24.xml"
+    },
+    {
+        "merged": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-debug-56:/navigation_mobile_navigation.xml.flat",
+        "source": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-main-58:/navigation/mobile_navigation.xml"
     },
     {
         "merged": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-debug-56:/drawable_ic_notifications_black_24dp.xml.flat",
@@ -82,10 +82,6 @@
     {
         "merged": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-debug-56:/drawable_salmon.jpg.flat",
         "source": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-main-58:/drawable/salmon.jpg"
-    },
-    {
-        "merged": "com.example.myrecipebook.app-debug-56:/layout_activity_home.xml.flat",
-        "source": "com.example.myrecipebook.app-main-58:/layout/activity_home.xml"
     },
     {
         "merged": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-debug-56:/drawable_side_nav_bar.xml.flat",
@@ -214,6 +210,10 @@
     {
         "merged": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-debug-56:/drawable_ic_launcher_background.xml.flat",
         "source": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-main-58:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.myrecipebook.app-debug-56:/layout_activity_recipe_detail.xml.flat",
+        "source": "com.example.myrecipebook.app-main-58:/layout/activity_recipe_detail.xml"
     },
     {
         "merged": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-debug-56:/layout_activity_weekly_plan.xml.flat",
@@ -662,6 +662,10 @@
     {
         "merged": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-debug-56:/layout_activity_main.xml.flat",
         "source": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-main-58:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-debug-56:/layout_activity_recipe_detail.xml.flat",
+        "source": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-main-58:/layout/activity_recipe_detail.xml"
     },
     {
         "merged": "/home/sanbid/.gradle/daemon/8.10.2/com.example.myrecipebook.app-debug-56:/drawable_ic_menu_camera.xml.flat",

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:2:1-110:12
-INJECTED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:2:1-110:12
-INJECTED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:2:1-110:12
-INJECTED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:2:1-110:12
+ADDED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:2:1-114:12
+INJECTED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:2:1-114:12
+INJECTED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:2:1-114:12
+INJECTED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:2:1-114:12
 MERGED from [androidx.databinding:viewbinding:8.8.2] /home/sanbid/.gradle/caches/8.10.2/transforms/c659df79d6da38d8f49a2f9690e486b0/transformed/viewbinding-8.8.2/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.gms:play-services-auth:21.3.0] /home/sanbid/.gradle/caches/8.10.2/transforms/4d32d8b686b7ef14150cb14439178747/transformed/play-services-auth-21.3.0/AndroidManifest.xml:17:1-40:12
 MERGED from [com.google.firebase:firebase-database:20.3.0] /home/sanbid/.gradle/caches/8.10.2/transforms/a565892b279c223190366be06d2a979c/transformed/firebase-database-20.3.0/AndroidManifest.xml:15:1-38:12
@@ -170,8 +170,8 @@ ADDED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/Andr
 	android:name
 		ADDED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:21:22-78
 application
-ADDED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:26:5-108:19
-INJECTED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:26:5-108:19
+ADDED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:26:5-112:19
+INJECTED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:26:5-112:19
 MERGED from [com.google.android.gms:play-services-auth:21.3.0] /home/sanbid/.gradle/caches/8.10.2/transforms/4d32d8b686b7ef14150cb14439178747/transformed/play-services-auth-21.3.0/AndroidManifest.xml:22:5-38:19
 MERGED from [com.google.android.gms:play-services-auth:21.3.0] /home/sanbid/.gradle/caches/8.10.2/transforms/4d32d8b686b7ef14150cb14439178747/transformed/play-services-auth-21.3.0/AndroidManifest.xml:22:5-38:19
 MERGED from [com.google.firebase:firebase-database:20.3.0] /home/sanbid/.gradle/caches/8.10.2/transforms/a565892b279c223190366be06d2a979c/transformed/firebase-database-20.3.0/AndroidManifest.xml:25:5-36:19
@@ -360,6 +360,12 @@ ADDED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/Andr
 		ADDED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:93:13-37
 	android:name
 		ADDED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:92:13-62
+activity#com.example.myrecipebook.activities.RecipeDetailActivity
+ADDED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:96:9-98:39
+	android:exported
+		ADDED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:98:13-37
+	android:name
+		ADDED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml:97:13-60
 uses-sdk
 INJECTED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/sanbid/AndroidStudioProjects/mealmates_bidesh/app/src/main/AndroidManifest.xml

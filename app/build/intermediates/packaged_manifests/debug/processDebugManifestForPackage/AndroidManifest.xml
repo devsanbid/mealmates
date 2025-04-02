@@ -118,6 +118,9 @@
             android:name="com.example.myrecipebook.activities.SavedLocationsActivity"
             android:exported="false"
             android:parentActivityName="com.example.myrecipebook.ui.map.MapFragment" />
+        <activity
+            android:name="com.example.myrecipebook.activities.RecipeDetailActivity"
+            android:exported="false" />
 
         <!-- Remove declarations for non-activity classes -->
         <!--
