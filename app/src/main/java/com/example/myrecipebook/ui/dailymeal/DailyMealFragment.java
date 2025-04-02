@@ -10,6 +10,10 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import android.content.Intent;
+import com.example.myrecipebook.activities.RecipeDetailActivity;
+import com.example.myrecipebook.models.Recipe;
+import com.google.gson.Gson;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.myrecipebook.R;
@@ -29,7 +33,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
-public class DailyMealFragment extends Fragment implements WeeklyPlanAdapter.OnRemoveItemListener { // Implement listener
+public class DailyMealFragment extends Fragment implements WeeklyPlanAdapter.OnRemoveItemListener, WeeklyPlanAdapter.OnRecipeClickListener {
 
     private static final String TAG = "DailyMealFragment";
     private RecyclerView recyclerView;
@@ -55,7 +59,7 @@ public class DailyMealFragment extends Fragment implements WeeklyPlanAdapter.OnR
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         // Pass context carefully and the listener
-        adapter = new WeeklyPlanAdapter(getActivity(), planItems, this); // Pass 'this' as listener
+        adapter = new WeeklyPlanAdapter(getActivity(), planItems, this, this::onRecipeClick); // Pass both listeners
         recyclerView.setAdapter(adapter);
 
         return view;
@@ -191,6 +195,34 @@ public class DailyMealFragment extends Fragment implements WeeklyPlanAdapter.OnR
         if (recyclerView != null && isLoading) {
             recyclerView.setVisibility(View.GONE);
         }
+    }
+
+    @Override
+    public void onRecipeClick(String recipeId) {
+        if (getActivity() == null) return;
+        
+        // Fetch full recipe details from Firestore
+        FirebaseFirestore.getInstance().collection("Recipes")
+            .document(recipeId)
+            .get()
+            .addOnSuccessListener(documentSnapshot -> {
+                if (documentSnapshot.exists()) {
+                    Recipe recipe = documentSnapshot.toObject(Recipe.class);
+                    if (recipe != null) {
+                        Intent intent = new Intent(getActivity(), RecipeDetailActivity.class);
+                        intent.putExtra("recipe", new Gson().toJson(recipe));
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(getActivity(), "Failed to load recipe details", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(getActivity(), "Recipe not found", Toast.LENGTH_SHORT).show();
+                }
+            })
+            .addOnFailureListener(e -> {
+                Toast.makeText(getActivity(), "Error loading recipe: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                Log.e(TAG, "Error loading recipe", e);
+            });
     }
 
     @Override

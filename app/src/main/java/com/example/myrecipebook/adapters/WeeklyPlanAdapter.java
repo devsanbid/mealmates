@@ -18,6 +18,7 @@ import java.util.List;
 import android.util.Log; // Import Log
 
 public class WeeklyPlanAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+    private OnRecipeClickListener recipeClickListener;
 
     private static final int VIEW_TYPE_DAY = 0;
     private static final int VIEW_TYPE_RECIPE = 1;
@@ -30,11 +31,16 @@ public class WeeklyPlanAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
     public interface OnRemoveItemListener {
         void onRemoveItemClick(int position);
     }
+    
+    public interface OnRecipeClickListener {
+        void onRecipeClick(String recipeId);
+    }
 
-    public WeeklyPlanAdapter(Context context, List<Object> items, OnRemoveItemListener listener) {
+    public WeeklyPlanAdapter(Context context, List<Object> items, OnRemoveItemListener removeListener, OnRecipeClickListener recipeClickListener) {
         this.context = context;
-        this.items = items != null ? items : new ArrayList<>(); // Ensure list is not null
-        this.removeListener = listener;
+        this.items = items != null ? items : new ArrayList<>();
+        this.removeListener = removeListener;
+        this.recipeClickListener = recipeClickListener;
     }
 
     @Override
@@ -95,8 +101,12 @@ public class WeeklyPlanAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
                     removeListener.onRemoveItemClick(position);
                 }
             });
-            // Add click listener for the whole item if needed
-            // holder.itemView.setOnClickListener(...)
+            // Handle recipe item click
+            recipeHolder.itemView.setOnClickListener(v -> {
+                if (recipeClickListener != null) {
+                    recipeClickListener.onRecipeClick(recipeItem.getRecipeId());
+                }
+            });
         }
     }
 

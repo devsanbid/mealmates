@@ -10,9 +10,13 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.content.Intent;
 import android.widget.Toast;
+import android.content.Intent;
+import com.example.myrecipebook.activities.RecipeDetailActivity;
 
 import androidx.annotation.NonNull;
+import com.google.gson.Gson;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.myrecipebook.R;
@@ -21,6 +25,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.squareup.picasso.Picasso;
+import com.google.gson.Gson;
 
 import java.io.File; // Import File
 import java.util.HashMap;
@@ -97,7 +102,16 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
             //     actionListener.onMarkAsPurchased(recipe.getId());
             // }
         });
+
+        // Handle recipe item click
+        holder.rootView.setOnClickListener(v -> {
+            Intent intent = new Intent(context, RecipeDetailActivity.class);
+            intent.putExtra("recipe", new Gson().toJson(recipe));
+            context.startActivity(intent);
+        });
     }
+
+    // Add Gson import at top of file if not already present
 
     @Override
     public int getItemCount() {
@@ -115,9 +129,11 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecipeView
         ImageView image;
         ImageButton btnDelete, btnPurchase;
         Button btnAddToPlan;
+        View rootView;
 
         public RecipeViewHolder(@NonNull View itemView) {
             super(itemView);
+            rootView = itemView;
             title = itemView.findViewById(R.id.recipe_title);
             description = itemView.findViewById(R.id.recipe_description);
             duration = itemView.findViewById(R.id.recipe_duration);

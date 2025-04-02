@@ -93,6 +93,10 @@
             android:exported="false"
             android:parentActivityName=".ui.map.MapFragment"/>
 
+        <activity
+            android:name=".activities.RecipeDetailActivity"
+            android:exported="false"/>
+
         <!-- Remove declarations for non-activity classes -->
         <!--
         <activity
